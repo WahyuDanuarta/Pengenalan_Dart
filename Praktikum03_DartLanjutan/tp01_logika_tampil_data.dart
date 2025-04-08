@@ -5,13 +5,13 @@ void main() {
     {'nama': null, 'nim': '2021003', 'jurusan': 'Teknik Komputer'},
   ];
 
-  // Blok jika data mahasiswa kosong
+  // 1. Blok jika data mahasiswa kosong
   if (mahasiswa.isEmpty) {
     print("Data mahasiswa kosong.");
     return;
   }
 
-  // Tampilkan Data Mahasiswa dengan Foreach
+  // 2. Tampilkan Data Mahasiswa dengan forEach
   print("Menampilkan data dengan forEach:");
   mahasiswa.forEach((mhs) {
     print(
@@ -19,7 +19,7 @@ void main() {
     );
   });
 
-  // Tampilkan Data Mahasiswa dengan For
+  // 2. Tampilkan Data Mahasiswa dengan For
   print("\nMenampilkan data dengan for:");
   for (var i = 0; i < mahasiswa.length; i++) {
     var mhs = mahasiswa[i];
@@ -28,7 +28,7 @@ void main() {
     );
   }
 
-  // Validasi jika ada value yang bernilai null
+  // 3. Validasi jika ada value yang bernilai null
   print("\nValidasi data yang bernilai null:");
   for (var i = 0; i < mahasiswa.length; i++) {
     var mhs = mahasiswa[i];

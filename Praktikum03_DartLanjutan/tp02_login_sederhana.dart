@@ -1,23 +1,24 @@
 import 'dart:io';
 
 void main() {
-  // Tetapkan username dan password
+  // 1. Tetapkan username dan password
   final String correctUsername = 'admin';
   final String correctPassword = '1234';
 
   int attempts = 0; // Menghitung jumlah percobaan login
   bool isLoggedIn = false; // Status login
 
+  // 2. Loop untuk proses login dengan batas 3 percobaan
   while (attempts < 3 && !isLoggedIn) {
-    // Input username
+    // 3. Input username
     stdout.write("Masukkan username: ");
     String? username = stdin.readLineSync()?.trim();
 
-    // Input password
+    // 3. Input password
     stdout.write("Masukkan password: ");
     String? password = stdin.readLineSync()?.trim();
 
-    // Validasi input tidak boleh kosong atau hanya spasi
+    // 4. Validasi input tidak boleh kosong atau hanya spasi
     if (username == null ||
         username.isEmpty ||
         password == null ||
@@ -26,7 +27,7 @@ void main() {
       continue;
     }
 
-    // Cek kecocokan username dan password
+    // 5. Cek kecocokan username dan password
     if (username == correctUsername && password == correctPassword) {
       isLoggedIn = true;
       print("Login berhasil!");
@@ -36,7 +37,7 @@ void main() {
     }
   }
 
-  // Jika percobaan habis dan belum login
+  // 6. Jika percobaan habis dan belum login
   if (!isLoggedIn) {
     print("Kesempatan habis. Login gagal!");
   }
